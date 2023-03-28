@@ -30,7 +30,7 @@ interface ApiService {
         apiKey:String = API_KEY
     ) : News
 
-    @GET("v2/top-headlines")
+    @GET("v2/everything")
     suspend fun getSports(
         @Query("language")
         language:String = "en",
@@ -42,7 +42,7 @@ interface ApiService {
         apiKey:String = API_KEY
     ) : News
 
-    @GET("v2/top-headlines")
+    @GET("v2/everything")
     suspend fun getFinance(
         @Query("language")
         language:String = "en",

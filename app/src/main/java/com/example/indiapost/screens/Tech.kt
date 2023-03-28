@@ -39,7 +39,7 @@ fun TechScreen(navController: NavHostController, modifier: Modifier = Modifier) 
         newsViewModel.getNewsList()
     }
     if(newsViewModel.newsListResponse.isNotEmpty()) {
-        println("mush home" +newsViewModel.newsListResponse[0].articles[0].title)
+        println("mush tech" +newsViewModel.newsListResponse[0].articles[0].title)
         Surface{
             NewsCardList(news = newsViewModel.newsListResponse[0], navController)
         }

@@ -24,10 +24,10 @@ fun BottomNavGraph(navController: NavHostController) {
             TechScreen(navController)
         }
         composable(route = Screens.Sports.route) {
-            SportsScreen()
+            SportsScreen(navController)
         }
         composable(route = Screens.Finance.route) {
-            FinanceScreen()
+            FinanceScreen(navController)
         }
         composable(
             route = Screens.ViewArticle.route + "/{url}",

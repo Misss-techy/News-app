@@ -32,15 +32,15 @@ import com.example.indiapost.screens.shareLink as shareLink1
 
 @Composable
 fun TrendingScreen(navController: NavHostController, modifier: Modifier = Modifier) {
-    val TrendingViewModel: NewsViewModel = viewModel()
+    val trendingViewModel: NewsViewModel = viewModel()
 
     LaunchedEffect(key1 = Unit) {
-        TrendingViewModel.getTrendingList()
+        trendingViewModel.getTrendingList()
     }
-    if (TrendingViewModel.trendingListResponse.isNotEmpty()) {
-        println("mush trending" +TrendingViewModel.trendingListResponse[0].articles[0].title)
+    if (trendingViewModel.trendingListResponse.isNotEmpty()) {
+        println("mush trending" +trendingViewModel.trendingListResponse[0].articles[0].title)
         Surface {
-            TrendingCardsList(news = TrendingViewModel.trendingListResponse[0], navController)
+            TrendingCardsList(news = trendingViewModel.trendingListResponse[0], navController)
         }
     } else {
         ShimmerListCard(modifier = modifier)
