@@ -7,11 +7,11 @@ India post is a news application that gives you latest and trending news
 on Tech, Sports and Finance. Built using MVVM clean architecture principle, 
 it is a simple yet powerful app. 
 
-India Post is coming soon on Aptiode.
+India Post is coming soon on Aptoide.
 
 <p align="left"> 
 <a href="https://en.aptoide.com/">
-    <img alt="Get it on Aptiode"
+    <img alt="Get it on Aptoide"
         height="80"
         src="https://github.com/Misss-techy/News-app/assets/61909434/c40e89a4-4a68-434d-b7e5-8cbaa6a30cf1" />
         </a>
