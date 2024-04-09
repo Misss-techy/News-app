@@ -24,11 +24,14 @@ India Post is coming soon on F-Droid.
 - **MVVM and Clean Architecture**: Developed using the Model-View-ViewModel (MVVM) architectural pattern along with Clean Architecture principles, ensuring robustness, scalability, and maintainability of the codebase.
         
 # Screenshots
-[<img src="https://github.com/Misss-techy/News-app/assets/61909434/93bab8a0-c4bc-42d3-800a-633906df398b" align="left"
+[<img src="https://github.com/Misss-techy/News-app/assets/61909434/93bab8a0-c4bc-42d3-800a-633906df398b"
 width="200" hspace="10" vspace="10">]()
-[<img src="https://github.com/Misss-techy/News-app/assets/61909434/e1162e87-fd23-43b6-843a-128546ebc8e2" align="left"
+[<img src="https://github.com/Misss-techy/News-app/assets/61909434/e1162e87-fd23-43b6-843a-128546ebc8e2"
 width="200" hspace="10" vspace="10">]()
-[<img src="https://github.com/Misss-techy/News-app/assets/61909434/b634b74c-ede3-42e9-ae0a-e17cd3670346" align="left"
+
+
+
+[<img src="https://github.com/Misss-techy/News-app/assets/61909434/b634b74c-ede3-42e9-ae0a-e17cd3670346"
 width="200" hspace="10" vspace="10">]()
-[<img src="https://github.com/Misss-techy/News-app/assets/61909434/adc3ae5a-5f7a-488f-8b82-0cded7c003eb" align="left"
+[<img src="https://github.com/Misss-techy/News-app/assets/61909434/adc3ae5a-5f7a-488f-8b82-0cded7c003eb"
 width="200" hspace="10" vspace="10">]()
