@@ -1,13 +1,12 @@
 package com.example.indiapost.ViewModel
 
 import android.util.Log
-import androidx.compose.runtime.*
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.indiapost.api.RetrofitInstance
-import com.example.indiapost.models.Article
 import com.example.indiapost.models.News
 import kotlinx.coroutines.launch
 
@@ -29,7 +28,7 @@ class NewsViewModel : ViewModel() {
       val apiService = RetrofitInstance.getInstance()
       try {
         val newsList = apiService.getTrending()
-        var dummyList: List<News> = listOf(newsList)
+        val dummyList: List<News> = listOf(newsList)
         trendingListResponse = dummyList
       } catch (e: Exception) {
         errorMessage = e.message.toString()
@@ -43,7 +42,7 @@ class NewsViewModel : ViewModel() {
       val apiService = RetrofitInstance.getInstance()
       try {
         val newsList = apiService.getNews()
-        var dummyList: List<News> = listOf(newsList)
+        val dummyList: List<News> = listOf(newsList)
         _newsListResponse = dummyList
       } catch (e: Exception) {
         errorMessage = e.message.toString()
@@ -57,7 +56,7 @@ class NewsViewModel : ViewModel() {
       val apiService = RetrofitInstance.getInstance()
       try {
         val newsList = apiService.getSports()
-        var dummyList: List<News> = listOf(newsList)
+        val dummyList: List<News> = listOf(newsList)
         _sportsListResponse = dummyList
       } catch (e: Exception) {
         errorMessage = e.message.toString()
@@ -71,7 +70,7 @@ class NewsViewModel : ViewModel() {
       val apiService = RetrofitInstance.getInstance()
       try {
         val newsList = apiService.getFinance()
-        var dummyList: List<News> = listOf(newsList)
+        val dummyList: List<News> = listOf(newsList)
         _financeListResponse = dummyList
       } catch (e: Exception) {
         errorMessage = e.message.toString()

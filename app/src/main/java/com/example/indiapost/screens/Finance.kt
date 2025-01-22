@@ -1,15 +1,14 @@
 package com.example.indiapost.screens
 
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.indiapost.ViewModel.NewsViewModel
-import com.example.indiapost.ui.theme.IndiaPostTheme
+import com.example.indiapost.screens.components.NewsCardList
+import com.example.indiapost.screens.components.ShimmerListNews
 
 @Composable
 fun FinanceScreen(navController: NavHostController, modifier: Modifier = Modifier){
@@ -17,8 +16,7 @@ fun FinanceScreen(navController: NavHostController, modifier: Modifier = Modifie
     LaunchedEffect(key1 = Unit){
         financeViewModel.getFinanceList()
     }
-    if(financeViewModel.financeListResponse.isNotEmpty()) {
-        println("mush finance" +financeViewModel.financeListResponse[0].articles[0].title)
+    if(financeViewModel.financeListResponse.getOrNull(0)?.articles?.isNotEmpty() == true) {
         Surface{
             NewsCardList(news = financeViewModel.financeListResponse[0], navController)
         }
@@ -26,11 +24,3 @@ fun FinanceScreen(navController: NavHostController, modifier: Modifier = Modifie
         ShimmerListNews( modifier = modifier)
     }
 }
-
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewProfileScreen() {
-//    IndiaPostTheme {
-//        FinanceScreen()
-//    }
-//}

@@ -6,10 +6,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.example.indiapost.models.Article
 import com.example.indiapost.models.Screens
-import com.example.indiapost.models.Source
-import com.example.indiapost.screens.*
+import com.example.indiapost.screens.ArticleScreen
+import com.example.indiapost.screens.FinanceScreen
+import com.example.indiapost.screens.SportsScreen
+import com.example.indiapost.screens.TechScreen
+import com.example.indiapost.screens.TrendingScreen
 
 @Composable
 fun BottomNavGraph(navController: NavHostController) {
@@ -38,7 +40,7 @@ fun BottomNavGraph(navController: NavHostController) {
                 }
             )
         ) { entry ->
-            ViewArticle(url = entry.arguments?.getString("url")!!)
+            ArticleScreen(url = entry.arguments?.getString("url")!!)
         }
     }
 }

@@ -1,30 +1,22 @@
-package com.example.indiapost.screens
+package com.example.indiapost.screens.components
 
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberAsyncImagePainter
-import com.example.indiapost.models.Screens
-import java.net.URLEncoder
 
 fun Modifier.shimmerEffect(): Modifier = composed {
     var size by remember {
@@ -74,29 +66,24 @@ fun ShimmerListItemNews(
     modifier: Modifier
 ) {
     if(isLoading){
-        Card()
-        {
+        Card {
             ListItem(
                 modifier = Modifier,
-                icon = {
-                    Box(
-                        modifier = Modifier
-                            .size(90.dp)
+                icon = { Box(modifier = Modifier.size(90.dp).shimmerEffect()) },
+                text = {
+                    Text(
+                        text = "",
+                        modifier = modifier
                             .shimmerEffect()
+                            .size(10.dp)
                     )
                 },
-                text = { Text(
-                    text = "",
-                    modifier = modifier
-                        .shimmerEffect()
-                        .size(10.dp)
-                ) },
-                secondaryText = { Text(
-                    text = "",
-                    modifier = modifier
-                        .shimmerEffect()
-                        .size(10.dp)
-                )}
+                secondaryText = {
+                    Text(
+                        text = "",
+                        modifier = modifier.shimmerEffect().size(10.dp)
+                    )
+                }
             )
         }
     }

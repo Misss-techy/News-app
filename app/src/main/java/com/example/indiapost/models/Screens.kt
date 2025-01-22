@@ -42,16 +42,11 @@ sealed class Screens(
         inActiveIcon = 0,
     )
 
-    fun withArgs(vararg args: String) : String{
-        println("mush withArgs called")
-        var str:String = buildString{
+    fun withArgs(vararg args: String) : String {
+        val str:String = buildString{
             append(route)
             args.forEach{ arg ->
-                if(arg!=null){
-                append("/$arg")}
-                else{
-                    append("/")
-                }
+                append("/$arg")
             }
         }
         return str

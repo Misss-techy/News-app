@@ -1,23 +1,27 @@
 package com.example.indiapost
 
-import android.graphics.drawable.BitmapDrawable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import coil.compose.AsyncImagePainter.State.Empty.painter
 import com.example.indiapost.models.Screens
 
 @Composable
@@ -38,13 +42,12 @@ fun MainScreen(){
 fun TopBar(){
     TopAppBar(
         modifier =  Modifier
-            .background(Brush.horizontalGradient(
-            colors = listOf(Color.White,Color.Black))),
-            title = {
-                Row() {
-                    Text(text = "INDIA POST")
-                }
-            }
+            .background(
+                Brush.horizontalGradient(
+                    colors = listOf(Color.White,Color.Black)
+                )
+            ),
+        title = { Text(text = "INDIA POST") }
     )
 }
 
@@ -91,5 +94,5 @@ fun RowScope.AddItem(
                 Image(painter = painterResource(id = screen.inActiveIcon), contentDescription = null)
             }
         }
-        )
+    )
 }

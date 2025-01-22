@@ -16,7 +16,7 @@ interface ApiService {
     @GET("v2/top-headlines")
     suspend fun getTrending(
         @Query("country")
-        countryCode:String = "IN",
+        countryCode:String = "us",
         @Query("page")
         page:Int = 2,
         @Query("apiKey")
